@@ -1,3 +1,5 @@
+package com.testgcp.upload;
+
 import com.google.cloud.WriteChannel;
 import com.google.cloud.storage.BlobInfo;
 import com.google.cloud.storage.Bucket;
@@ -33,7 +35,7 @@ public class FileUploader {
         long start0 = System.nanoTime();
         useBlobWriter(storage, filePath, BlobInfo.newBuilder(bucket.getName(), filenameAsString).build());
         long time0 = System.nanoTime() - start0;
-        System.out.printf("Took %.3f ms to upload %,d MB File%n", time0 / 1e6, Files.size(filePath) / 1024 / 1024);
+        System.out.printf("Took %.3f ms to com.testgcp.upload %,d MB File%n", time0 / 1e6, Files.size(filePath) / 1024 / 1024);
     }
 
 
